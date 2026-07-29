@@ -8,8 +8,8 @@ use std::fmt::{self, Debug, Formatter};
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 use zeroize::Zeroize;
 
-const AUTHORITY_TEMPLATE: &str = include_str!("../../../contracts/authz/authority-v1.datalog");
-const AUTHORITY_TEMPLATE_V2: &str = include_str!("../../../contracts/authz/authority-v2.datalog");
+const AUTHORITY_TEMPLATE: &str = include_str!("../vendored/authz/authority-v1.datalog");
+const AUTHORITY_TEMPLATE_V2: &str = include_str!("../vendored/authz/authority-v2.datalog");
 const MAX_TOKEN_SIZE: usize = 16_384;
 
 pub struct SensitiveToken(String);

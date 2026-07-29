@@ -14,7 +14,7 @@ const OTHER_USER: &str = "usr_fedcba9876543210";
 const TENANT: &str = "ten_0123456789abcdef";
 const OTHER_TENANT: &str = "ten_fedcba9876543210";
 const RESOURCE: &str = "mission:0123456789abcdef";
-const AUTHORITY_TEMPLATE: &str = include_str!("../../../contracts/authz/authority-v1.datalog");
+const AUTHORITY_TEMPLATE: &str = include_str!("../vendored/authz/authority-v1.datalog");
 
 #[derive(Default)]
 struct MemoryRevocations {
@@ -1430,7 +1430,7 @@ fn agent_token_carries_k1_facts_and_agent_runs_v2_denies_cross_fleet() {
         .unwrap();
     let policy = std::fs::read_to_string(
         std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("../../contracts/authz/agent-runs-v2.datalog"),
+            .join("vendored/authz/agent-runs-v2.datalog"),
     )
     .unwrap();
 

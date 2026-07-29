@@ -10,8 +10,8 @@ use biscuit_parser_legacy::builder::{Binary, Check, CheckKind, Op, Rule, Term};
 use biscuit_parser_legacy::parser::parse_source;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
-const SESSIONS_POLICY: &str = include_str!("../../../contracts/authz/sessions-v1.datalog");
-const MISSIONS_POLICY: &str = include_str!("../../../contracts/authz/missions-v1.datalog");
+const SESSIONS_POLICY: &str = include_str!("../vendored/authz/sessions-v1.datalog");
+const MISSIONS_POLICY: &str = include_str!("../vendored/authz/missions-v1.datalog");
 const MAX_TOKEN_SIZE: usize = 16_384;
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
